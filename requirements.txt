@@ -1,0 +1,10 @@
+flask
+torch
+transformers
+joblib
+scikit-learn
+pandas
+datasets
+requests
+selenium
+webdriver-manager

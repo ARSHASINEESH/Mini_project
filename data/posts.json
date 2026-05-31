@@ -1,0 +1,224 @@
+[
+    {
+        "id": "1779269254456",
+        "text": "heavy flood in kottayam. people are seeking for help",
+        "source": "manual",
+        "username": "",
+        "created_at": "20-05-2026 02:57 PM",
+        "disaster_probability": 1.0,
+        "help_probability": 0.72,
+        "verification_status": "VERIFIED",
+        "verification_confidence": 1.0,
+        "final_decision": "REAL",
+        "credibility_score": 0.58,
+        "email_logs": []
+    },
+    {
+        "id": "1779268968882",
+        "text": "• #Kerala is seeing its worst flooding in decades\r\n\r\n• Over 60 dead, thousands evacuated\r\n\r\n• Many on rooftops waiting to be rescued\r\n\r\n• They need, food, clothing, any help possible\r\n\r\n• You can contribute to the CM's fund online - it's easy, secure",
+        "source": "manual",
+        "username": "",
+        "created_at": "20-05-2026 02:52 PM",
+        "disaster_probability": 1.0,
+        "help_probability": 0.571,
+        "verification_status": "VERIFIED",
+        "verification_confidence": 1.0,
+        "final_decision": "REAL",
+        "credibility_score": 0.68,
+        "email_logs": [
+            {
+                "need": "emergency_resources",
+                "email": "disasterauthorities@gmail.com",
+                "status": "success"
+            },
+            {
+                "need": "rescue",
+                "email": "rescue.team.alert@gmail.com",
+                "status": "success"
+            },
+            {
+                "need": "food",
+                "email": "aarshanm4@gmail.com",
+                "status": "success"
+            }
+        ]
+    },
+    {
+        "id": "1779268947865",
+        "text": "• #Kerala is seeing its worst flooding in decades\r\n\r\n• Over 60 dead, thousands evacuated\r\n\r\n• Many on rooftops waiting to be rescued\r\n\r\n• They need, food, clothing, any help possible\r\n\r\n• You can contribute to the CM's fund online - it's easy, secure",
+        "source": "manual",
+        "username": "",
+        "created_at": "20-05-2026 02:52 PM",
+        "disaster_probability": 1.0,
+        "help_probability": 0.0,
+        "verification_status": "UNVERIFIED",
+        "verification_confidence": 0.0,
+        "final_decision": "FAKE",
+        "credibility_score": 0.68,
+        "email_logs": []
+    },
+    {
+        "id": "1774845524890",
+        "text": "heavy rain in kottayam. people are seeking for food.",
+        "source": "manual",
+        "username": "",
+        "created_at": "30-03-2026 10:08 AM",
+        "disaster_probability": 0.999,
+        "help_probability": 0.0,
+        "verification_status": "UNVERIFIED",
+        "verification_confidence": 0.0,
+        "final_decision": "FAKE",
+        "credibility_score": 0.5,
+        "email_logs": []
+    },
+    {
+        "id": "1774772419180",
+        "text": "Heavy rain in Kerala. People are seeking for food.",
+        "source": "manual",
+        "username": "",
+        "created_at": "29-03-2026 01:50 PM",
+        "disaster_probability": 0.999,
+        "help_probability": 0.0,
+        "verification_status": "UNVERIFIED",
+        "verification_confidence": 0.0,
+        "final_decision": "FAKE",
+        "credibility_score": 0.5,
+        "email_logs": []
+    },
+    {
+        "id": "1774772371184",
+        "text": "#Kerala is seeing its worst flooding in decades • Over 60 dead, thousands evacuated • Many on rooftops waiting to be rescued • They need, food, clothing, any help possible • You can contribute to the CM's fund online - it's easy, secure",
+        "source": "manual",
+        "username": "",
+        "created_at": "29-03-2026 01:49 PM",
+        "disaster_probability": 1.0,
+        "help_probability": 0.74,
+        "verification_status": "VERIFIED",
+        "verification_confidence": 1.0,
+        "final_decision": "REAL",
+        "credibility_score": 0.7,
+        "email_logs": [
+            {
+                "need": "food",
+                "email": "aarshanm4@gmail.com",
+                "status": "success"
+            },
+            {
+                "need": "rescue",
+                "email": "rescue.team.alert@gmail.com",
+                "status": "success"
+            },
+            {
+                "need": "emergency_resources",
+                "email": "disasterauthorities@gmail.com",
+                "status": "success"
+            }
+        ]
+    },
+    {
+        "id": "1774771129494",
+        "text": "#Kerala is seeing its worst flooding in decades • Over 60 dead, thousands evacuated • Many on rooftops waiting to be rescued • They need, food, clothing, any help possible • You can contribute to the CM's fund online - it's easy, secure",
+        "source": "manual",
+        "username": "",
+        "created_at": "29-03-2026 01:28 PM",
+        "disaster_probability": 1.0,
+        "help_probability": 0.571,
+        "verification_status": "VERIFIED",
+        "verification_confidence": 1.0,
+        "final_decision": "REAL",
+        "credibility_score": 0.6,
+        "email_logs": []
+    },
+    {
+        "id": "1774771094248",
+        "text": "heavy rain in kottayam. people are seeking for food.",
+        "source": "manual",
+        "username": "",
+        "created_at": "29-03-2026 01:28 PM",
+        "disaster_probability": 0.999,
+        "help_probability": 0.0,
+        "verification_status": "UNVERIFIED",
+        "verification_confidence": 0.0,
+        "final_decision": "FAKE",
+        "credibility_score": 0.5,
+        "email_logs": []
+    },
+    {
+        "id": "1774585366183",
+        "text": "If you violate lockdown, we will put you in a room & play Masakali 2.0 on loop: Jaipur police warns violators. #Lockdown #COVID19",
+        "source": "twitter",
+        "username": "PTI_News",
+        "created_at": "27-03-2026 09:52 AM",
+        "disaster_probability": 0.0,
+        "help_probability": 0.431,
+        "verification_status": "VERIFIED",
+        "verification_confidence": 1.0,
+        "final_decision": "FAKE",
+        "credibility_score": 0.39,
+        "email_logs": []
+    },
+    {
+        "id": "1774585168369",
+        "text": "#Kerala is seeing its worst flooding in decades\r\n\r\n• Over 60 dead, thousands evacuated\r\n\r\n• Many on rooftops waiting to be rescued\r\n\r\n• They need, food, clothing, any help possible\r\n\r\n• You can contribute to the CM's fund online - it's easy, secure",
+        "source": "manual",
+        "username": "",
+        "created_at": "27-03-2026 09:49 AM",
+        "disaster_probability": 1.0,
+        "help_probability": 0.571,
+        "verification_status": "VERIFIED",
+        "verification_confidence": 1.0,
+        "final_decision": "REAL",
+        "credibility_score": 0.91,
+        "email_logs": [
+            {
+                "need": "food",
+                "email": "aarshanm4@gmail.com",
+                "status": "success"
+            },
+            {
+                "need": "emergency_resources",
+                "email": "disasterauthorities@gmail.com",
+                "status": "success"
+            },
+            {
+                "need": "rescue",
+                "email": "rescue.team.alert@gmail.com",
+                "status": "success"
+            }
+        ]
+    },
+    {
+        "id": "1774416113642",
+        "text": "Tragic landslide occurred in Wayanad. People seeking for emergency rescue",
+        "source": "manual",
+        "username": "",
+        "created_at": "25-03-2026 10:51 AM",
+        "disaster_probability": 1.0,
+        "help_probability": 0.505,
+        "verification_status": "VERIFIED",
+        "verification_confidence": 1.0,
+        "final_decision": "REAL",
+        "credibility_score": 0.9,
+        "email_logs": [
+            {
+                "need": "rescue",
+                "email": "rescue.team.alert@gmail.com",
+                "status": "success"
+            }
+        ]
+    },
+    {
+        "id": "1774383208164",
+        "text": "Moment of the 7.7 Magnitude powerful earthquake in Bangkok, Thailand",
+        "source": "twitter",
+        "username": "Top_Disaster",
+        "created_at": "25-03-2026 01:43 AM",
+        "disaster_probability": 1.0,
+        "help_probability": 0.379,
+        "verification_status": "VERIFIED",
+        "verification_confidence": 1.0,
+        "final_decision": "REAL",
+        "credibility_score": 0.88,
+        "email_logs": []
+    }
+]

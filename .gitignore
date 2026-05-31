@@ -1,0 +1,26 @@
+# Virtual environments
+venv/
+venv310/
+
+# Python cache
+__pycache__/
+*/__pycache__/
+*.pyc
+
+# ML models
+models/disaster_bert/
+models/help_model.pkl
+
+# Model/checkpoint files
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.pkl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Response Intelligence System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="bg-blur bg1"></div>
+    <div class="bg-blur bg2"></div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <p class="tag">Relief Intelligence • Verification • Emergency Coordination</p>
+            <h1>Disaster Response Intelligence System</h1>
+            <p class="subtitle">
+                A smart humanitarian response platform to verify disaster posts, detect urgent needs,
+                and support faster coordination between people, volunteers, and authorities.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-wrapper">
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <section class="quick-info">
+            <div class="info-card">
+                <div class="info-icon">🛟</div>
+                <div>
+                    <h3>Relief Focused</h3>
+                    <p>Built to prioritize rescue, food, shelter, medical, and emergency resources.</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">✅</div>
+                <div>
+                    <h3>Trusted Verification</h3>
+                    <p>Combines AI prediction, News verification, and credibility scoring.</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">📨</div>
+                <div>
+                    <h3>Fast Alerting</h3>
+                    <p>Automatically notifies the appropriate authorities for identified needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid-two">
+
+            <div class="card glass">
+                <div class="section-title">
+                    <span class="section-icon">📝</span>
+                    <h2>Post a Help Request</h2>
+                </div>
+
+                <p class="small-text">
+                    People affected by a disaster can submit a message here for analysis and response.
+                </p>
+
+                <form action="/submit_post" method="POST">
+                    <textarea
+                        name="post_text"
+                        rows="7"
+                        placeholder="Example: Heavy flooding in Wayanad. Families are trapped and need food, shelter, and rescue support immediately."
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="primary-btn">
+                        Submit for Analysis
+                    </button>
+                </form>
+            </div>
+
+            <div class="card glass">
+                <div class="section-title">
+                    <span class="section-icon">🐦</span>
+                    <h2>Fetch from Twitter / X</h2>
+                </div>
+
+                <p class="small-text">
+                    Enter a public account username to fetch the latest disaster-related post.
+                </p>
+
+                <form action="/fetch_twitter" method="POST">
+                    <input
+                        type="text"
+                        name="twitter_username"
+                        placeholder="Enter username without @"
+                        required
+                    >
+
+                    <button type="submit" class="secondary-btn">
+                        Fetch and Analyze
+                    </button>
+                </form>
+            </div>
+
+        </section>
+
+        <section class="feed-section">
+            <div class="section-head">
+                <h2>Community Help Feed</h2>
+                <p>Verified and analyzed posts are shown here for response and coordination.</p>
+            </div>
+
+            <div class="post-feed">
+
+                {% if posts %}
+                    {% for post in posts %}
+
+                        <div class="post-card">
+
+                            <div class="post-top">
+                                <span class="source-badge {{ post.source }}">
+                                    {{ post.source|upper }}
+                                </span>
+
+                                {% if post.final_decision == "REAL" %}
+                                    <span class="status real">REAL</span>
+                                {% else %}
+                                    <span class="status fake">FAKE</span>
+                                {% endif %}
+                            </div>
+
+                            <p class="post-text">{{ post.text }}</p>
+
+                            <div class="meta-grid">
+                                <div class="meta-box">
+                                    <span>Disaster Probability</span>
+                                    <strong>{{ post.disaster_probability }}</strong>
+                                </div>
+
+                                <div class="meta-box">
+                                    <span>Help Probability</span>
+                                    <strong>{{ post.help_probability }}</strong>
+                                </div>
+
+                                <div class="meta-box">
+                                    <span>Verification</span>
+                                    <strong>{{ post.verification_status }}</strong>
+                                </div>
+
+                                <div class="meta-box">
+                                    <span>Credibility Score</span>
+                                    <strong>{{ post.credibility_score }}</strong>
+                                </div>
+                            </div>
+
+                            {% if post.email_logs and post.email_logs|length > 0 %}
+                                <div class="mail-status-box">
+                                    <h4>Authority Mail Status</h4>
+
+                                    {% for log in post.email_logs %}
+                                        <div class="mail-log {{ log.status }}">
+                                            {% if log.status == "success" %}
+                                                ✅ Mail sent successfully to
+                                                <strong>{{ log.email }}</strong>
+                                                for
+                                                <strong>{{ log.need.replace('_', ' ').title() }}</strong>.
+                                            {% else %}
+                                                ❌ Mail sending failed to
+                                                <strong>{{ log.email }}</strong>
+                                                for
+                                                <strong>{{ log.need.replace('_', ' ').title() }}</strong>.
+                                            {% endif %}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+
+                            {% elif post.final_decision == "REAL" %}
+                                <div class="mail-status-box">
+                                    <div class="mail-log failed">
+                                        ⚠️ No specific Need identified.
+                                    </div>
+                                </div>
+                            {% endif %}
+
+                            <div class="post-footer">
+                                <span>Posted: {{ post.created_at }}</span>
+
+                                {% if post.username %}
+                                    <span>Source Account: @{{ post.username }}</span>
+                                {% endif %}
+                            </div>
+
+                        </div>
+
+                    {% endfor %}
+                {% else %}
+
+                    <div class="empty-state">
+                        <h3>No posts yet</h3>
+                        <p>
+                            Submit a help request or fetch a Twitter/X post to view live results here.
+                        </p>
+                    </div>
+
+                {% endif %}
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
