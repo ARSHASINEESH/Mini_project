@@ -1,5 +1,14 @@
-# BTech Miniproject
-##### An Intelligent and Trustworthy Social-Media–Driven Disaster Emergency Response System with Fake Content Detection and Volunteer Coordination
+# BTech Mini project
+## Team Members
+Arsha N M, Krishnendu M V, Pranav Wilson, Sai Krishna P
+###### Department of Artificial intelligence and data science, SJCET
+
+## Project Guide
+
+Mr. Dr. Renjith Thomas, Associate Professor 
+###### Department of Artificial intelligence and data science, SJCET
+
+### An Intelligent and Trustworthy Social-Media–Driven Disaster Emergency Response System with Fake Content Detection and Volunteer Coordination
 During continuously occurring disaster situations such as floods, earthquakes, and
 landslides, social media becomes a vital platform where affected individuals share real
 time updates and request urgent help. However, due to the massive volume of posts,
